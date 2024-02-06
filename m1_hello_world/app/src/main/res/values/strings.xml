@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">First HW</string>
+    <string name="reset">Сброс</string>
+    <string name="remove">Удалить</string>
+    <string name="Add">Добавить</string>
+    <string name="all_seats_are_free">Все места свободны</string>
+    <string name="there_are_seats_left">Осталось мест</string>
+    <string name="there_are_too_many_passengers">Пассажиров слишком много!</string>
+</resources>
