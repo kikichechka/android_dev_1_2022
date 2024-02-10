@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Third HW</string>
+    <string name="play">Play</string>
+    <string name="skip_next">Skip Next</string>
+    <string name="image">image</string>
+    <string name="skip_previous">skip_previous</string>
+    <string name="executor">Исполнитель</string>
+    <string name="composition">Наименование композиции</string>
+</resources>
