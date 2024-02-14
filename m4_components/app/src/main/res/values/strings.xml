@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Fourth HW</string>
+    <string name="photo">Photo</string>
+    <string name="helper_input_name">Имя</string>
+    <string name="helper_input_phone">Телефон</string>
+    <string name="gender">Пол</string>
+    <string name="gender_m">М</string>
+    <string name="gender_w">Ж</string>
+    <string name="receive_notifications">Получать уведомления</string>
+    <string name="authorization_on_the_device">Об авторизации на устройстве</string>
+    <string name="new_products_and_offers">О новинках и предложениях</string>
+    <string name="score">Баллы</string>
+    <string name="count_score">/100</string>
+    <string name="save">Сохранить</string>
+    <string name="toast_save_text">"Изменения сохранены"</string>
+</resources>

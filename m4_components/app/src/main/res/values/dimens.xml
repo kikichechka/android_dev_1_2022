@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_for_activity">10dp</dimen>
+    <dimen name="width_photo">120dp</dimen>
+    <dimen name="height_photo">120dp</dimen>
+    <dimen name="radius_button">30dp</dimen>
+    <dimen name="text_size">16sp</dimen>
+</resources>
