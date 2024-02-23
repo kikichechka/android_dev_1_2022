@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/helloFragment">
+
+    <fragment
+        android:id="@+id/helloFragment"
+        android:name="com.example.super_quiz.ui.main.HelloFragment"
+        android:label="HelloFragment"
+        tools:layout="@layout/fragment_hello">
+        <action
+            android:id="@+id/action_HelloFragment_to_QuestionFragment"
+            app:destination="@id/questionFragment"
+            app:launchSingleTop="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.example.super_quiz.ui.main.QuestionFragment"
+        android:label="question_fragment"
+        tools:layout="@layout/question_fragment" >
+
+        <action
+            android:id="@+id/action_QuestionFragment_to_ResultFragment"
+            app:destination="@id/resultFragment"
+            app:popUpTo="@id/helloFragment" />
+
+        <action
+            android:id="@+id/action_QuestionFragment_back"
+            app:destination="@+id/helloFragment"
+            app:popUpTo="@id/helloFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.super_quiz.ui.main.ResultFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_result">
+
+        <action
+            android:id="@+id/action_ResultFragment_to_QuestionFragment"
+            app:destination="@id/questionFragment"
+            app:popUpTo="@id/helloFragment" />
+    </fragment>
+
+</navigation>
