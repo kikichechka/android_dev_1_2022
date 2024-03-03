@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/helloFragment">
+
+    <fragment
+        android:id="@+id/helloFragment"
+        android:name="com.example.super_quiz.ui.main.HelloFragment"
+        android:label="HelloFragment"
+        tools:layout="@layout/fragment_hello">
+
+        <action
+            android:id="@+id/action_HelloFragment_to_QuestionFragment"
+            app:destination="@id/questionFragment"
+            app:enterAnim="@anim/slide_in_left"
+
+            app:exitAnim="@anim/slide_in_right"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.example.super_quiz.ui.main.QuestionFragment"
+        android:label="question_fragment"
+        tools:layout="@layout/question_fragment">
+
+        <action
+            android:id="@+id/action_QuestionFragment_to_ResultFragment"
+            app:destination="@id/resultFragment"
+            app:enterAnim="@anim/slide_in_left"
+
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/helloFragment" />
+
+        <action
+            android:id="@+id/action_QuestionFragment_back"
+            app:destination="@+id/helloFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_in_right"
+            app:popUpTo="@id/helloFragment"
+            app:popUpToInclusive="true"
+
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.super_quiz.ui.main.ResultFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_result">
+
+        <action
+            android:id="@+id/action_ResultFragment_to_QuestionFragment"
+            app:destination="@id/questionFragment"
+            app:enterAnim="@anim/slide_in_left"
+
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/helloFragment" />
+    </fragment>
+
+</navigation>
