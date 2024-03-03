@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SupeR quiz</string>
+
+    <string-array name="планеты">
+        <item>Меркурий</item>
+        <item>Венера</item>
+    </string-array>
+</resources>
