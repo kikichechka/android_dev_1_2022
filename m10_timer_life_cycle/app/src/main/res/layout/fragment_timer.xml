@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".TimerFragment">
+
+    <TextView
+        android:id="@+id/timer_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/progress_bar"
+        android:text="@string/timer"
+        android:textSize="@dimen/text_size_for_timer"/>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:indicatorSize="@dimen/size_for_progress_bar"
+        app:trackThickness="10dp"
+        app:layout_constraintTop_toBottomOf="@id/timer_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/slider"
+        android:progress="0"
+        app:indicatorDirectionCircular="clockwise"/>
+<!--    android:indeterminate="true"-->
+
+
+    <TextView
+        android:id="@+id/counter_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/progress_bar"
+        app:layout_constraintBottom_toBottomOf="@id/progress_bar"
+        app:layout_constraintStart_toStartOf="@id/progress_bar"
+        app:layout_constraintEnd_toEndOf="@id/progress_bar"
+        android:textSize="@dimen/text_size_for_timer"/>
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/progress_bar"
+        app:layout_constraintBottom_toTopOf="@id/button_start"
+
+        android:valueTo="100.0"
+        android:stepSize="20.0" />
+<!--    android:valueFrom="0.0"-->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_start"
+        android:text="@string/start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/slider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:theme="@style/Button"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

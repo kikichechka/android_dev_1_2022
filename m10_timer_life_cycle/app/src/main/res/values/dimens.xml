@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="size_for_progress_bar">120dp</dimen>
+    <dimen name="margin_for_fragment">25dp</dimen>
+    <dimen name="text_size_for_timer">40sp</dimen>
+</resources>
