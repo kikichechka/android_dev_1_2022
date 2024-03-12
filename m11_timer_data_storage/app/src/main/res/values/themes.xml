@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.EleventhHW" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:textSize">20sp</item>
+        <item name="textBackground">@color/black</item>
+    </style>
+
+    <style name="Theme.EleventhHW" parent="Base.Theme.EleventhHW" />
+</resources>

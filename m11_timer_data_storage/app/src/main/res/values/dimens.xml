@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margit_for_fragment">15dp</dimen>
+    <dimen name="margit_for_button">6dp</dimen>
+</resources>
