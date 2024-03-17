@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".HelloFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin_for_search"
+            android:hint="@string/search_bar"
+            app:error="@{viewModel.state.countError}">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/entered_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:onTextChanged="@{(text, before, on, after) -> (viewModel.onTextChanged(text.toString()))}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/layout_margin_fragment"
+            android:text="@={viewModel.resultStr}"
+            android:textStyle="italic|bold" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress"
+            style="@style/Widget.App.CircularProgressIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:visibility="@{viewModel.state == State.Loading.INSTANCE ? View.VISIBLE : View.GONE}" />
+    </LinearLayout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.example.twelfthhw.State" />
+
+        <variable
+            name="viewModel"
+            type="com.example.twelfthhw.SearchViewModel" />
+    </data>
+</layout>
