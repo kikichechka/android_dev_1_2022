@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_margin_for_fragment">15dp</dimen>
+    <dimen name="width_image">200dp</dimen>
+    <dimen name="height_image">200dp</dimen>
+</resources>
