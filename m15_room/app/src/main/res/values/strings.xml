@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FifteenthHW</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="edit_text">Введите текст</string>
+    <string name="save">Сохранить</string>
+    <string name="clear_all">Очистить все</string>
+    <string name="error_text">В слове допустимы только буквы и дефисы</string>
+</resources>
