@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Nasa</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="rover">"Rover: "</string>
+    <string name="sol">"Sol: "</string>
+    <string name="camera">"Camera: "</string>
+    <string name="date">"Date: "</string>
+    <string name="arg">arg_photo_moon</string>
+    <string name="photo_mars">Фото марса</string>
+    <string name="apod">Фото вселенной</string>
+    <string name="choose_date">Выберите дату снимков</string>
+
+</resources>
