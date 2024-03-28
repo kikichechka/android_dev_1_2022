@@ -1,4 +1,4 @@
-package com.example.seventeenthhw.data
+package com.example.seventeenthhw.data.model
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
@@ -11,14 +11,4 @@ data class Mars(
     val rover: Rover,
     val camera: Camera,
     val sol: Int
-) : Parcelable
-
-@Parcelize
-data class Rover(
-    val name: String
-) : Parcelable
-
-@Parcelize
-data class Camera(
-    val name: String
 ) : Parcelable

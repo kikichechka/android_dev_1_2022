@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import com.bumptech.glide.Glide
 import com.example.seventeenthhw.R
-import com.example.seventeenthhw.data.Mars
+import com.example.seventeenthhw.data.model.Mars
 import com.example.seventeenthhw.databinding.FragmentItemPhotoMarsBinding
 
 class ItemPhotoMarsFragment : Fragment() {

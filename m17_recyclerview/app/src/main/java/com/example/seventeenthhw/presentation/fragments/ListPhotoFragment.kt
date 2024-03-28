@@ -15,7 +15,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.seventeenthhw.R
 import com.example.seventeenthhw.data.AstronomyPicture
-import com.example.seventeenthhw.data.Mars
+import com.example.seventeenthhw.data.model.Mars
 import com.example.seventeenthhw.data.StateListPhotoFragment
 import com.example.seventeenthhw.databinding.FragmentListPhotoBinding
 import com.example.seventeenthhw.presentation.adapters.ListPhotoAstronomyPictureAdapter
