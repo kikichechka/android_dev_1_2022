@@ -46,7 +46,7 @@ class ListPhotoFragment : Fragment() {
 
     private val calendar = Calendar.getInstance()
 
-    private lateinit var stateFragment: StateListPhotoFragment
+    private var stateFragment: StateListPhotoFragment? = null
 
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -80,6 +80,7 @@ class ListPhotoFragment : Fragment() {
         when (stateFragment) {
             StateListPhotoFragment.MARS -> createListAdapterMars()
             StateListPhotoFragment.ASTRONOMY -> createListAdapterAstronomyPicture()
+            null -> {}
         }
     }
 
@@ -112,6 +113,7 @@ class ListPhotoFragment : Fragment() {
             }
 
             StateListPhotoFragment.ASTRONOMY -> return
+            null -> {}
         }
     }
 

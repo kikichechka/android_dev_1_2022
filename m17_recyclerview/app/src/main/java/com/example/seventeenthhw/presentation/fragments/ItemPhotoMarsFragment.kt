@@ -14,7 +14,7 @@ import com.example.seventeenthhw.data.model.Mars
 import com.example.seventeenthhw.databinding.FragmentItemPhotoMarsBinding
 
 class ItemPhotoMarsFragment : Fragment() {
-    private lateinit var param: Mars
+    private var param: Mars? = null
 
     private var _binding: FragmentItemPhotoMarsBinding? = null
     private val binding
@@ -24,7 +24,7 @@ class ItemPhotoMarsFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param = it.getParcelable(KEY_PARAM, Mars::class.java)!!
+            param = it.getParcelable(KEY_PARAM, Mars::class.java)
         }
     }
 
@@ -44,16 +44,18 @@ class ItemPhotoMarsFragment : Fragment() {
 
     @SuppressLint("SetTextI18n")
     private fun showItemMars() {
-        Glide
-            .with(requireContext())
-            .load(param.imgSrc)
-            .into(binding.image)
+        if (param != null) {
+            Glide
+                .with(requireContext())
+                .load(param?.imgSrc)
+                .into(binding.image)
 
-        with(binding) {
-            rover.text = "${resources.getString(R.string.rover)}: ${param.rover.name}"
-            camera.text = "${resources.getString(R.string.camera)}: ${param.camera.name}"
-            sol.text = "${resources.getString(R.string.sol)}: ${param.sol}"
-            date.text = "${resources.getString(R.string.date)}: ${param.earthDate}"
+            with(binding) {
+                rover.text = "${resources.getString(R.string.rover)}: ${param?.rover?.name}"
+                camera.text = "${resources.getString(R.string.camera)}: ${param?.camera?.name}"
+                sol.text = "${resources.getString(R.string.sol)}: ${param?.sol}"
+                date.text = "${resources.getString(R.string.date)}: ${param?.earthDate}"
+            }
         }
     }
 

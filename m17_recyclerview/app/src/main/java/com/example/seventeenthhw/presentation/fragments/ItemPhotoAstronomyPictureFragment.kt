@@ -12,7 +12,7 @@ import com.example.seventeenthhw.data.AstronomyPicture
 import com.example.seventeenthhw.databinding.FragmentItemPhotoAstronomyPictureBinding
 
 class ItemPhotoAstronomyPictureFragment : Fragment() {
-    private lateinit var param: AstronomyPicture
+    private var param: AstronomyPicture? = null
 
     private var _binding: FragmentItemPhotoAstronomyPictureBinding? = null
     private val binding
@@ -23,7 +23,7 @@ class ItemPhotoAstronomyPictureFragment : Fragment() {
         super.onCreate(savedInstanceState)
         arguments.let {
             if (it != null) {
-                param = it.getParcelable(KEY_PARAM_ASTRONOMY, AstronomyPicture::class.java)!!
+                param = it.getParcelable(KEY_PARAM_ASTRONOMY, AstronomyPicture::class.java)
             }
         }
     }
@@ -43,15 +43,17 @@ class ItemPhotoAstronomyPictureFragment : Fragment() {
     }
 
     private fun showItemAstronomyPicture() {
-        Glide
-            .with(requireContext())
-            .load(param.url)
-            .into(binding.image)
+        if (param != null) {
+            Glide
+                .with(requireContext())
+                .load(param?.url)
+                .into(binding.image)
 
-        with(binding) {
-            title.text = param.title
-            date.text = param.date
-            explanation.text = param.explanation
+            with(binding) {
+                title.text = param?.title
+                date.text = param?.date
+                explanation.text = param?.explanation
+            }
         }
     }
 
