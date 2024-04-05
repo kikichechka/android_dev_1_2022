@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DialogStyle" parent="@style/MaterialAlertDialog.Material3">
+<!--        MaterialAlertDialog.FullWidthButtons-->
+<!--        <item name="alertDialogCenterButtons">true</item>-->
+<!--        <item name="alertDialogButtonGroupStyle">@style/Widget.Material3.Snackbar.FullWidth</item>-->
+        <item name="buttonStyle">@style/MaterialAlertDialog.Material3</item>
+    </style>
+
+</resources>
