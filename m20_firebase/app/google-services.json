@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "363504567927",
+    "project_id": "photo-sights",
+    "storage_bucket": "photo-sights.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363504567927:android:3ade19c2a5325575c22872",
+        "android_client_info": {
+          "package_name": "com.example.photosights"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFsALmUSqa9UJ_zPu-TYLOBgiuTdv8z3A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

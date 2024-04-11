@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/viewFragment">
+
+<!--    <fragment-->
+<!--        android:id="@+id/listPhotoFragment"-->
+<!--        android:name="com.example.photosights.presentation.fragments.listphoto.ListPhotoFragment"-->
+<!--        android:label="fragment_list_photo"-->
+<!--        tools:layout="@layout/fragment_list_photo">-->
+
+<!--        <action-->
+<!--            android:id="@+id/action_listPhotoFragment_to_makePhotoFragment"-->
+<!--            app:destination="@id/makePhotoFragment"-->
+<!--            app:enterAnim="@android:anim/fade_in"-->
+<!--            app:exitAnim="@android:anim/fade_out"-->
+<!--            app:popEnterAnim="@android:anim/fade_in"-->
+<!--            app:popExitAnim="@android:anim/fade_out"/>-->
+<!--    </fragment>-->
+
+    <fragment
+        android:id="@+id/viewFragment"
+        android:name="com.example.photosights.presentation.fragments.viewfragment.ViewFragment"
+        android:label="fragment_view"
+        tools:layout="@layout/fragment_view">
+
+        <action
+            android:id="@+id/action_viewFragment_to_makePhotoFragment"
+            app:destination="@id/makePhotoFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/makePhotoFragment"
+        android:name="com.example.photosights.presentation.fragments.makephoto.MakePhotoFragment"
+        android:label="fragment_photo"
+        tools:layout="@layout/fragment_make_photo">
+
+        <action
+            android:id="@+id/action_makePhotoFragment_to_itemDonePhotoFragment"
+            app:destination="@id/itemDonePhotoFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/itemDonePhotoFragment"
+        android:name="com.example.photosights.presentation.fragments.itemdone.ItemDonePhotoFragment"
+        android:label="ItemDonePhotoFragment"
+        tools:layout="@layout/fragment_item_done_photo">
+
+        <action
+            android:id="@+id/action_itemDonePhotoFragment_to_listPhotoFragment"
+            app:destination="@id/viewFragment"
+            app:popUpTo="@id/viewFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_itemDonePhotoFragment_to_makePhotoFragment"
+            app:destination="@id/makePhotoFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popUpTo="@id/makePhotoFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

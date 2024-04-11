@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.fragments.makephoto.MakePhotoFragment">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button_check"
+        android:contentDescription="@string/image_view" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button_clear"
+        android:layout_marginHorizontal="@dimen/margin_for_floating_button"
+        android:backgroundTint="@android:color/transparent"
+        android:outlineProvider="none"
+        android:src="@drawable/baseline_check_24"
+        android:contentDescription="@string/button_check" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/button_check"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/button_check"
+        android:layout_marginHorizontal="@dimen/margin_for_floating_button"
+        android:backgroundTint="@android:color/transparent"
+        android:outlineProvider="none"
+        android:src="@drawable/baseline_clear_24"
+        android:contentDescription="@string/button_clear" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
