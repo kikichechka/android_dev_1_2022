@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.seventeenthhw.data.AstronomyPicture
+import com.example.seventeenthhw.data.model.AstronomyPicture
 import com.example.seventeenthhw.databinding.ItemAstronomyPictureBinding
 
 class ListPhotoAstronomyPictureAdapter(private val onClick: (AstronomyPicture) -> Unit) :

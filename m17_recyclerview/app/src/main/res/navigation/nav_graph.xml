@@ -42,7 +42,7 @@
 
         <argument
             android:name="ArgsAstronomy"
-            app:argType="com.example.seventeenthhw.data.AstronomyPicture" />
+            app:argType="com.example.seventeenthhw.data.model.AstronomyPicture" />
 
     </fragment>
 

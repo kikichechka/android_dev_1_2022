@@ -14,7 +14,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.seventeenthhw.R
-import com.example.seventeenthhw.data.AstronomyPicture
+import com.example.seventeenthhw.data.model.AstronomyPicture
 import com.example.seventeenthhw.data.model.Mars
 import com.example.seventeenthhw.data.StateListPhotoFragment
 import com.example.seventeenthhw.databinding.FragmentListPhotoBinding
@@ -176,7 +176,7 @@ class ListPhotoFragment : Fragment() {
             it.addOnPositiveButtonClickListener { time ->
                 calendar.timeInMillis = time
                 val date = calendar.time
-                listPhotoViewModel.changeDate(date)
+                listPhotoViewModel.changeDate(calendar)
             }
             it.show(parentFragmentManager, "DatePicker")
         }
